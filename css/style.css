@@ -554,7 +554,46 @@ label.error{
   }
 }
 
+@media (max-width: 768px) {
+  /* 1) Logo pequeño en el footer */
+  .copy-bottom.white.boxed img {
+    width: 50px !important;
+    max-width: none !important;
+  }
 
+  /* 2) Ocultar el texto “Hola, soy Sissi Fleitas” */
+  /*    y 3) el botón “Comenzar la experiencia” */
+  [data-anchor="page1"] .intro h1 {
+    display: none !important;
+  }
+}
+
+/* Desktop por defecto */
+.section-1 .section-bg {
+  background-image: url("../images/bg/hero-bg-3.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+/* Móvil: usando imagen optimizada */
+@media (max-width: 768px) {
+  .section-1 .section-bg {
+    background-image: url("../images/bg/hero-bg-3-mobile.jpg") !important;
+    background-size: cover;
+    background-position: center;
+  }
+}
+
+@media (max-width: 768px) {
+  
+  /* Reposicionamos el botón en móvil */
+  [data-anchor="page1"] .intro .btn-bordered-white {
+    position: absolute;
+    left: 50%;
+    bottom: -200px !important;
+    transform: translateX(-50%);
+  }
+}
 /* 1.6 Preloader */
 
 
